@@ -1,0 +1,3 @@
+INSERT INTO `dede_tagindex` VALUES('1','ceshi','1','0','1','0','0','1462313215','1462313215','1462313215');
+INSERT INTO `dede_tagindex` VALUES('2','tagceshi','1','0','1','0','0','1462313215','1462313215','1462313215');
+INSERT INTO `dede_tagindex` VALUES('3','gaga','1','0','1','0','0','1462313215','1462313215','1462313215');

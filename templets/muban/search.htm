@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>搜索结果_{dede:global.cfg_webname/}</title>
+<link type="text/css" rel="stylesheet" href="/style/nbase_22b24b5.css">
+<link rel="stylesheet" type="text/css" href="/style/core_4784a5c.css">
+<link rel="stylesheet" type="text/css" href="/style/newindex_9ed2efd.css">
+<link rel="stylesheet" type="text/css" href="/style/ad_taobao_bbf8a0c.css">
+<link rel="stylesheet" type="text/css" href="/style/ngameentry_b0cb8cd.css">
+<link rel="stylesheet" type="text/css" href="/style/nfeedback_1bfe698.css">
+<meta name="author" content="order by dede58.com" />
+<script type="text/javascript" src="/style/jquery-1.6.4.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="/style/lib_538033e.js"></script>
+<script type="text/javascript" src="/style/jquery.masonry.min.js"></script>
+<script type="text/javascript" src="/style/waterfall.js"></script>
+</head>
+<body>
+<div id="wrapper" class="index-wrapper">
+  <div id="pagelet-nnav" >
+    <div class="topbarWrapper clearfix">
+      <ul class="right">
+        <li class="tb-item"><a class="tb-link" href="{dede:global.cfg_memberurl/}/index_do.php?fmdo=user&dopost=regnew" target="_blank">注册</a></li>
+        <li class="tb-item"><a class="tb-link" href="javascript:window.external.AddFavorite('{dede:global.cfg_basehost/}','{dede:global.cfg_webname/}')">收藏</a></li>
+        <li class="tb-item"  data-node="more"> <a class="tb-link" href="#">更多</a>
+          <div class="layer">
+            <ul>
+              {dede:channelartlist typeid='9,10,11,12'}
+              <li><a href="{dede:field name='typeurl'/}" class="layer-item">{dede:field name='typename'/}</a></li>
+              {/dede:channelartlist}
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="midbarWrapper">
+      <div class="midbar-inner">
+        <div class="logo-box"> <a class="logo-link" href="{dede:global.cfg_indexurl/}"><img class="logo" src="/style/logo.png"></a> </div>
+        <div class="search-box">
+          <form action="/plus/search.php" method="get" target="_blank">
+            <div class="input-group clearfix">
+              <input name="q" type="text" value="在这里搜索..." onFocus="if(this.value=='在这里搜索...'){this.value='';}"  onblur="if(this.value==''){this.value='在这里搜索...';}">
+              <div class="btn-submit">
+                <button type="submit"> <i class="icon icon-search"></i> </button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="user-box">
+          <div class="username-box clearfix"> <a class="nav-login user-item" href="{dede:global.cfg_memberurl/}/login.php" target="_blank"> <span>登录</span> </a> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="container" class="clearfix">
+    <div class="index-left">
+      <div id="pagelet-channels">
+        <ul class="channel-box">
+          <li class="channel-item"> <a class="item selected" href="/" ><span class="channel-tag">首页</span></a> </li>
+          {dede:channel row='8'  type ='top'    }
+          <li class="channel-item"> <a class="item " href="[field:typelink/]"><span class="channel-tag news_[field:global.autoindex/]">[field:typename/]</span></a> </li>
+          {/dede:channel}
+        </ul>
+      </div>
+    </div>
+    <div class="index-main">
+      <div id="pagelet-nfeedlist">
+        <div class="feedcomm" style="display: block;"><img src="/style/ad1.jpg"></div>
+        <ul id="content">
+          {dede:list perpage='3' titlelen='66' orderby ='pubdate'}
+          <li class="item clearfix post">
+            <div class="item-inner">
+              <div class="lbox left"> <a href="[field:arcurl/]" target="_blank"> <img class="feedimg" src="[field:litpic/]" onload="this.style.opacity=1;" style="opacity: 1;"> </a> </div>
+              <div class="rbox">
+                <div class="rbox-inner">
+                  <div class="title-box"> <a class="link title" href="[field:arcurl/]" target="_blank">[field:title/]</a> </div>
+                  <div class="abstract"> <a class="link" href="[field:arcurl/]" target="_blank">[field:description function="cn_substr(@me,192)"/]... </a> </div>
+                  <div class="footer clearfix">
+                    <div class="left lfooter"> <span class="lbtn source">[field:typename/]</span> </div>
+                    <div class="right rfooter"> <a class="feed_tools share rbtn" href="javascript:;">
+                      <div class="snsbox">
+                        <div class="snsbox-inner"> <span>分享到：</span>
+                          <div class="snszone"> <i class="sns-btn sns-weixin" title="分享到微信"></i> <i class="sns-btn sns-qzone" title="分享到QQ空间"></i> <i class="sns-btn sns-weibo" title="分享到新浪微博"></i> </div>
+                        </div>
+                      </div>
+                      </a> <span> <a class="rbtn bury" href="javascript:;" title="" >
+                      <div class="likeGroup_box_dislike"> <span>不喜欢</span> </div>
+                      </a> <a class="rbtn digg" href="javascript:;" title="">
+                      <div class="likeGroup_box_like"> <span>喜欢</span> </div>
+                      </a> </span> </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          {/dede:list}
+        </ul>
+        <h2 class="next_page" style="font-size:14px; text-align:center;">
+          <div style="display:none;"> {dede:pagelist listsize='4'/}</div>
+        </h2>
+      </div>
+    </div>
+    {dede:include filename="right.htm"/}
+    <div id="pagelet-nfeedback">
+      <ul>
+        <li>
+          <div class="tools"> <a class="nrefresh" href="javascript:void(0)" onclick="location=location"></a> <a class="ntop" href="javascript:scroll(0,0)"> <img class="top_img" src="/style/top_762dbcc.png" alt="" /> </a> </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="/style/core_3d02ee5.js"></script> 
+<script>
+  require('pagelet/nnav/nnav.js').create({
+  'isHomePage' : true
+  });
+</script>
+</body>
+</html>
